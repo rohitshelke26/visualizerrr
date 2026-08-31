@@ -1,0 +1,39 @@
+# CSV-to-Dashboard Web Application Tasks
+
+- [x] Project Setup & Dependencies
+  - [x] Run Vite command --help first, then initialize React + TypeScript project
+  - [x] Install dependencies: `papaparse`, `@types/papaparse`, `recharts`, `@types/recharts`, `lucide-react`, `jspdf`, `html2canvas`, `autoprefixer`, `postcss`, `tailwindcss`
+  - [x] Configure Tailwind CSS (Tailwind v4)
+- [x] Define Core Types
+  - [x] Create `types/dataset.ts`
+  - [x] Create `types/dashboard.ts`
+- [x] Implement Parsing & Analytical Engines
+  - [x] Create CSV parsing engine (`lib/csvParser.ts`)
+  - [x] Create data profiling engine (`lib/dataAnalyzer.ts`)
+  - [x] Create KPI calculations (`lib/kpiGenerator.ts`)
+  - [x] Create layout and chart selector rules (`lib/chartSelector.ts`)
+  - [x] Create data and currency formatter (`lib/dataFormatter.ts`)
+  - [x] Create mock sample dataset (`lib/sampleData.ts`)
+- [x] Build UI Components
+  - [x] Header component (`components/Header.tsx`)
+  - [x] UploadZone component (`components/UploadZone.tsx`)
+  - [x] LoadingScreen component (`components/LoadingScreen.tsx`)
+  - [x] EmptyState & ErrorState components
+  - [x] KPICard component (`components/KPICard.tsx`)
+  - [x] FilterBar component (`components/FilterBar.tsx`)
+  - [x] ChartCard component with Recharts (`components/ChartCard.tsx`)
+  - [x] DatasetSummary component (`components/DatasetSummary.tsx`)
+  - [x] PDFExport component & engine (`lib/pdfGenerator.ts`)
+- [x] Assemble Pages & Layout
+  - [x] Create main Page container (`components/Dashboard.tsx`)
+  - [x] Connect components and state in `App.tsx` and custom styling in `index.css`
+- [ ] User Feedback Corrections & Enhancements
+  - [ ] Override Tailwind CSS v4 oklch colors with Hex mappings in `index.css` to fix html2canvas PDF crash
+  - [ ] Restructure Dashboard layout grid: place slicers and DatasetSummary side-by-side, render all charts in a balanced full-width 2-column grid to eliminate blank space
+  - [ ] Implement 2 new visualization types: Radar Chart and Composed (Line + Bar) Chart
+  - [ ] Rename application branding to "Rohit's Visualizer" (Header, App Title, Footers, and Doc Titles) and strip "Antigravity" branding
+  - [ ] Increase upload size limit to 50MB and rows count limit to 200,000
+- [ ] Verification & Polish
+  - [ ] Re-run Vite build check
+  - [ ] Verify PDF generation completes successfully in browser
+  - [ ] Verify balanced layout and new visualizations rendering
